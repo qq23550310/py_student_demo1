@@ -30,10 +30,12 @@
 
         </table>
     </div>
+    <script>
     $('.del').click(function(){
         var row_id = $(this).attr('row-id');
         $('#nid').val(row_id);
     })
+    </script>
     <div>
         <form action="/del_host" method="post">
             <input style="display: none" id="nid" type="text" name="nid" />
@@ -43,6 +45,7 @@
             </p>
         </form>
     </div>
+
 
 </body>
 </html>
