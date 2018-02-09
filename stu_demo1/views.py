@@ -21,7 +21,8 @@ USER_LIST = [
     {'id': 1, 'username': 'alex', 'email': 'asdfasdf', "gender": '男'},
     {'id': 2, 'username': 'eriuc', 'email': 'asdfasdf', "gender": '男'},
     {"id": 3, 'username': 'seven', 'email': 'asdfasdf', "gender": '男'},
-    {"id": 4, 'username': 'xiaoYun', 'email': '23550310@qq.com', "gender": '男'},
+    {"id": 4, 'username': 'xiaoYun', 'email': '23230310@qq.com', "gender": '男'},
+    {"id": 5, 'username': 'xiaoli', 'email': '1059238964@qq.com', "gender": '女'},
 ]
 
 
