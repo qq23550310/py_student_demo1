@@ -22,4 +22,5 @@ urlpatterns = [
     path('admin/', admin.site.urls),
     url('login', views.login),
     url('home', views.home),
+    url('detail/(d+)', views.detail, name='indexx'),
 ]

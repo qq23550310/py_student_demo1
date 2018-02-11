@@ -13,7 +13,7 @@
     </style>
 </head>
 <body>
-    <form action="/login" method="post">
+    <form action="/login" method="post" enctype="multipart/form-data">
 
         <p>
             <label for="username">用户名：</label>
@@ -22,9 +22,41 @@
         <p>
             <label for="password">密码：</label>
             <input id="password" name="pwd" type="password"/>
-            <input type="submit" value="提交" />
             <span style="color: red;">{{ error_msg }}</span>
         </p>
+
+        <p>
+            男：<input type="radio" name="gender" value="1"/>
+            女：<input type="radio" name="gender" value="2"/>
+            人妖：<input type="radio" name="gender" value="3"/>
+        </p>
+
+         <p>
+            爬山：<input type="checkbox"  name="favor" value="11"/>
+            游泳：<input type="checkbox" name="favor" value="22"/>
+            看书：<input type="checkbox" name="favor" value="33"/>
+        </p>
+
+        <p>
+            <select name="city">
+
+                <option value="sh">上海</option>
+                <option value="bj">北京</option>
+                <option value="tj">天津</option>
+
+            </select>
+        </p>
+
+        <p>
+            <select name="op" multiple>
+                <option value="gt">高挑</option>
+                <option value="xs">显瘦</option>
+                <option value="wp">微胖</option>
+            </select>
+        </p>
+
+        <input type="file" name="file_v" />
+        <input type="submit" value="提交" />
     </form>
     <script src="/static/jquery.min.js"></script>
 </body>
