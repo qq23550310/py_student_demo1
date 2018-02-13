@@ -36,6 +36,7 @@ INSTALLED_APPS = [
     'django.contrib.messages',
     'django.contrib.staticfiles',
     'stu_demo1.apps.StuDemo1Config',
+    'stu_system_demo',
 ]
 
 MIDDLEWARE = [

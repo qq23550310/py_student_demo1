@@ -1,0 +1,40 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <title>教师列表</title>
+
+    <style type="text/css">
+        table td{
+            text-align: center;
+        }
+    </style>
+</head>
+<body>
+        <h5>教师列表</h5><h6><a href="index.html">返回首页</a></h6>
+<table width="900px">
+    <tr>
+        <td>工号</td>
+        <td>姓名</td>
+        <td>性别</td>
+        <td>年龄</td>
+        <td>操作</td>
+    </tr>
+    {% for tea in teachers_list %}
+        <tr>
+            <td>{{ tea.t_id}}</td>
+            <td>{{ tea.name}}</td>
+            <td>{% if tea.sex == 1 %}
+                男
+                {% else %}
+                女
+            {% endif %}</td>
+        <td>{{ tea.age }}</td>
+            <td><a href="#">修改</a>
+                <a href="#">删除</a>
+                </td>
+        </tr>
+    {% endfor %}
+</table>
+</body>
+</html>
