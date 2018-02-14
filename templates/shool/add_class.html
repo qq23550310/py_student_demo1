@@ -1,0 +1,24 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <title>添加班级页面</title>
+    <h5>添加班级</h5>
+    <form action="/demo1/addClass" method="post">
+        班级名:<input type="text" name="name" /><br>
+        <select  name="course">
+
+            {% for course in course_list %}
+                <option value="{{ course.c_id }}">{{ course.name }}</option>
+            {% endfor %}
+
+        </select>
+        <br>
+        <input type="submit" value="添加">
+
+    </form>
+</head>
+<body>
+
+</body>
+</html>

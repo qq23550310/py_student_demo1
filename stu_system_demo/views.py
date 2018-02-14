@@ -46,3 +46,39 @@ def addTeacher(request):
         age = request.POST.get('age')
         models.Teachers.objects.create(name=name, sex=sex, age=age)
         return redirect('/demo1/checkTeachers')
+
+
+# 添加课程
+def addCourse(request):
+    if request.method == 'GET':
+        obj = models.Teachers.objects.all()
+        return render(request, 'shool/add_course.html', {'teacher_list': obj})
+    elif request.method == 'POST':
+        name = request.POST.get('name')
+        teacher_id = request.POST.get('teacher')
+        models.Course.objects.create(name=name, teacher_id=teacher_id)
+        return redirect('/demo1/checkCourseList')
+
+
+# 课程列表
+def checkCourseList(request):
+    obj = models.Course.objects.all()
+    return render(request, 'shool/course_list.html', {'course_list': obj})
+
+
+# 添加班级
+def addClass(request):
+    if request.method == 'GET':
+        obj = models.Course.objects.all()
+        return render(request, 'shool/add_class.html', {'course_list': obj})
+    elif request.method == 'POST':
+        name = request.POST.get('name')
+        course_id = request.POST.get('course')
+        models.StuClass.objects.create(name=name, course_id=course_id)
+        return redirect('/demo1/checkClasssList')
+
+
+# 班级列表
+def checkClasssList(request):
+    obj = models.StuClass.objects.all()
+    return render(request, 'shool/class_list.html', {'class_list': obj})

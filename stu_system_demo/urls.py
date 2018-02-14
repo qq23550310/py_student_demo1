@@ -8,4 +8,8 @@ urlpatterns = [
     url('index', views.index),
     url('checkTeachers', views.checkTeachersList),
     url('addteacher', views.addTeacher),
+    url('addCourse', views.addCourse),
+    url('checkCourseList', views.checkCourseList),
+    url('addClass', views.addClass),
+    url('checkClasssList', views.checkClasssList),
 ]
