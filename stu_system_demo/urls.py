@@ -12,4 +12,5 @@ urlpatterns = [
     url('checkCourseList', views.checkCourseList),
     url('addClass', views.addClass),
     url('checkClasssList', views.checkClasssList),
+    url('amendTeacher', views.amendTeacher),
 ]

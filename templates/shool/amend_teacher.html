@@ -1,0 +1,23 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <title>教师编辑</title>
+</head>
+<body>
+
+<h4>教师编辑</h4>
+
+  <form action="/demo1/amendTeacher" method="post">
+        姓名:<input type="text" name="name" placeholder="{{ teacher.name }}"/><br>
+        性别： {% if teacher.sex == 1 %}
+            <input type="radio" value="1" name="sex" checked="true"/>男
+      {% endif %}
+
+        <input type="radio" value="0" name="sex" />女<br>
+        年龄:<input type="text" name="age" placeholder="{{ teacher.age }}" /><br>
+        <br>
+        <input type="submit" value="保存">
+    </form>
+</body>
+</html>
