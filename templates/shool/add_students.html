@@ -8,7 +8,7 @@
         姓名:<input type="text" name="name" /><br>
         性别：<input type="radio" value="1" name="sex" />男
         <input type="radio" value="0" name="sex" />女<br>
-        年龄:<input type="text" name="age" /><br>sex
+        年龄:<input type="text" name="age" /><br>
         班级:<select name="class">
         {% for class in stu_class %}
              <option value={{ class.id}}>{{ class.name }}</option>

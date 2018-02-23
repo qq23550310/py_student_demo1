@@ -31,7 +31,7 @@
             {% endif %}</td>
         <td>{{ tea.age }}</td>
             <td><a href="/demo1/amendTeacher?id={{ tea.t_id }}">修改</a>
-                <a href="#">删除</a>
+                <a href="/demo1/delTeacher?id={{ tea.t_id }}">删除</a>
                 </td>
         </tr>
     {% endfor %}

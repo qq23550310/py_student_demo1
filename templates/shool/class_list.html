@@ -24,8 +24,8 @@
             <td>{{ class.id}}</td>
             <td>{{ class.name}}</td>
             <td>{{ class.course.name}}</td>
-            <td><a href="#">修改</a>
-                <a href="#">删除</a>
+            <td><a href="demo1/amendClass?id={{ class.id }}">修改</a>
+                <a href="demo1/delClass?id={{ class.id }}">删除</a>
                 </td>
         </tr>
     {% endfor %}

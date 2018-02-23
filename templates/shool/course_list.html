@@ -24,8 +24,8 @@
             <td>{{ course.c_id}}</td>
             <td>{{ course.name}}</td>
             <td>{{ course.teacher.name}}</td>
-            <td><a href="#">修改</a>
-                <a href="#">删除</a>
+            <td><a href="/demo1/amendCourse?id={{ course.c_id }}">修改</a>
+                <a href="/demo1/delCourse?id={{ course.c_id }}">删除</a>
                 </td>
         </tr>
     {% endfor %}

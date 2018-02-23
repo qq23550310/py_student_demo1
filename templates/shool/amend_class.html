@@ -1,0 +1,31 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <title>班级编辑</title>
+</head>
+<body>
+
+<h4>班级编辑</h4>
+
+  <form action="/demo1/amendClass" method="post">
+            <input type="hidden" value="{{ class.id }}" name="id" />
+        班级名:<input type="text" name="name" placeholder="{{ class.name }}"/><br>
+
+         <select name="course">
+
+            {% for cr in course %}
+                {% if cr.c_id == class.course.c_id %}
+                    <option value="{{ cr.c_id }}" selected="selected">{{ cr.name }}</option>
+                    {% else %}
+                    <option value="{{ cr.c_id }}">{{ cr.name }}</option>
+                {% endif %}
+
+            {% endfor %}
+
+        </select>
+        <br>
+        <input type="submit" value="保存">
+    </form>
+</body>
+</html>
